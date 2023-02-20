@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.brand::-webkit-scrollbar{
+  width:4px;
+  height:50px;
+}
+.brand::-webkit-scrollbar-thumb{
+  background:#4D4D4D;
+}
+.chat::-webkit-scrollbar{
+  display:none;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ overflow: hidden;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.message{
+  background:#766AC8;
+  min-width:50px;
+  max-width:60%;
+ padding:5px;
+ display:flex;
+ align-items:center;
+ justify-content: center;
+  box-sizing: border-box;
+  list-style-type: none;
+  color:white;
+  margin-top: 10px;
+  text-align: end;
+  height: 30px;
+  border-radius: 10px;
+  white-space:wrap;
+  cursor:pointer;
+}
+.modal{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  z-index:10000;
+  height:90%;
+}
+.progress{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  z-index:100000;
+}
+.call-screen{
+  width:40%;
+  position: absolute;
+  left:52%;
+  top:50%;
+  height:60%;
+transform: translate(-50%,-50%);
+background-image: linear-gradient(#163145,black);
+z-index:100000;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+@media screen and (max-width:619px){
+  .call-screen{
+    width:100%;
+    height:100%;
+    left:0;
+    top:0;
+    transform: none;
+  }
+}
